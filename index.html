@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            perspective: 1000px;
+        }
+
+        .love-story-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 95%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.6s ease;
+        }
+
+        .photo-collage {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+            transition: transform 0.6s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05) rotateY(10deg);
+        }
+
+        .photo-frame:hover img {
+            transform: scale(1);
+        }
+
+        .heart-icon {
+            color: #ff4757;
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: heartPulse 2s infinite;
+        }
+
+        .love-message {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 25px 0;
+            color: #2f3542;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .love-message.visible {
+            opacity: 1;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            background-color: #fff0f5;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff6b97;
+            color: white;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .reveal-btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .reveal-btn:hover {
+            background-color: #ff6b6b;
+            transform: scale(1.05);
+        }
+
+        .audio-icon {
+            font-size: 20px;
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @media (max-width: 600px) {
+            .photo-frame {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="love-story-container">
+        <div class="heart-icon">
+            <i class="fas fa-heart"></i>
+        </div>
+
+        <div class="photo-collage">
+            <div class="photo-frame">
+                <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/462574742_1506795416682916_3722447792505519748_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGbwsQHTLYJT3WQn35vdXXznh15eDx3apyeHXl4PHdqnNsenPKWGkl-pzrsvR1wDtvR2LyYTDOA0hyHgn_jCQc6&_nc_ohc=0MnIpyRi92wQ7kNvgF74cBg&_nc_oc=AdlNmn0_f-mzjRhM20Y6FXqjv8jxNnpBfL0C3tfpr1U9CaVOigbnxbjsIEg2Ueaw__k&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1wEiNsHoS9199qkYGGJPQtVY0UIE-NRpZds14Kdg6Ohn2A&oe=680DA4A3" alt="First Date">
+            </div>
+            <div class="photo-frame">
+                <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/486573747_999241385086125_7342995834684373368_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE_W7UccCU5sbNWieVWKKJcHHI8j7IqipsccjyPsiqKmxoYWimkqXbu3CuOxN2-QKnoZHtpNzwKIz9GL80o6Nvh&_nc_ohc=_-EVOfAa4wUQ7kNvgG3clKJ&_nc_oc=Adlw5z5QFdg9wUNqAtVEYgr6GgVwl8uCEUaHhGY29KsirnuUUxKqvV1jLNUXM-aKugw&_nc_zt=23&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1wFoSNeBkt7k2lHx8E8vSSTpVA2Sb1gz10pG_q6f590_mA&oe=680DA1FF" alt="Romantic Moment">
+            </div>
+            <div class="photo-frame">
+                <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/471646177_1363105761722535_6497752296459863292_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGI4ku01YATWrm4XuE_RGjOzVJyRN_3iInNUnJE3_eIidhRQy5GmsuSf2NcDrhaXGD0_7dj5r-Zx8gXbUzW6LDb&_nc_ohc=N4-7-jC8rdwQ7kNvgFbOudy&_nc_oc=AdniWNZXSoH3c_2ZOg4tl-A30VJQmfqx8GotzRfP2RC3paxgWWiVrdUZe89p-X4IHx0&_nc_zt=23&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1wGLY3sNGwYzuB0Mq8-jhAAM-ePZFt2yWHElWn68U0SG6Q&oe=680DB461" alt="Favorite Memory">
+            </div>
+            <div class="photo-frame">
+                <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/486236579_1198644148340850_2351434319006211039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGcvoiiQ6bNCYJDfDdihewxmR6uR1EuoMSZHq5HUS6gxKBo_ZoBRZCIc6tMmL9te9A2O7IhExlReyY2HLMj9T-s&_nc_ohc=Mi1itKVyVHAQ7kNvgGSaV8l&_nc_oc=AdkrAJPWGJ8jSflnKN4O25B5cP1GzZuMEbq-zjH_QVEIwHd31VmT-7CPwREyS4u796k&_nc_zt=23&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1wEhEjll78KlaAECrp_bDuvymyDefQFVMdDzMPVOzAN_pQ&oe=680DB27A" alt="Favorite Memory">
+            </div>
+        </div>
+
+        <h1>5 Months of Pure Love</h1>
+
+        <div id="loveMessage" class="love-message">
+            My love, these past five months have been nothing short of magical. Every moment with you 
+            feels like a dream I never want to wake up from. Your smile brightens even my darkest days, and your love fills my heart in ways I never knew were possible. With you, every laugh, every touch, every shared glance becomes a memory I’ll hold onto forever. I’m so grateful for this beautiful journey we’re on, and I can’t wait to see what the future holds for us—because as long as I have you, I know it will be amazing. 💖
+        </div>
+
+        <div id="timeline" class="timeline"></div>
+
+        <button id="revealBtn" class="reveal-btn">
+            <i class="fas fa-music audio-icon"></i>
+            Reveal Love Story
+        </button>
+
+        <audio id="loveAudio" style="display:none;" loop>
+            <source src="wife.mp4" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loveMessage = document.getElementById('loveMessage');
+            const revealBtn = document.getElementById('revealBtn');
+            const timeline = document.getElementById('timeline');
+            const audio = document.getElementById('loveAudio');
+            let isAudioPlaying = false;
+
+            // Relationship start date
+            const startDate = new Date('2024-03-28');
+            const now = new Date();
+            const totalSeconds = Math.floor((now - startDate) / 1000);
+            
+            const timelineData = [
+                { value: Math.floor(totalSeconds / (24 * 60 * 60)), label: 'Days' },
+                { value: Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60)), label: 'Hours' },
+                { value: Math.floor((totalSeconds % (60 * 60)) / 60), label: 'Minutes' },
+                { value: totalSeconds % 60, label: 'Seconds' }
+            ];
+
+            // Populate timeline
+            timelineData.forEach(item => {
+                const timelineItem = document.createElement('div');
+                timelineItem.classList.add('timeline-item');
+                timelineItem.innerHTML = `
+                    <div>${item.value}</div>
+                    <small>${item.label}</small>
+                `;
+                timeline.appendChild(timelineItem);
+            });
+
+            // Reveal message and audio functionality
+            revealBtn.addEventListener('click', () => {
+                // Toggle love message visibility
+                loveMessage.classList.toggle('visible');
+                
+                // Update button text
+                revealBtn.textContent = loveMessage.classList.contains('visible') 
+                    ? 'Hide Love Story' 
+                    : 'Reveal Love Story';
+
+                // Toggle audio
+                if (!isAudioPlaying) {
+                    audio.play();
+                    isAudioPlaying = true;
+                    revealBtn.innerHTML = `<i class="fas fa-pause audio-icon"></i> Pause Love Song`;
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                    isAudioPlaying = false;
+                    revealBtn.innerHTML = `<i class="fas fa-music audio-icon"></i> Reveal Love Story`;
+                }
+            });
+
+            // Handle audio end
+            audio.addEventListener('ended', () => {
+                isAudioPlaying = false;
+                revealBtn.innerHTML = `<i class="fas fa-music audio-icon"></i> Reveal Love Story`;
+            });
+        });
+    </script>
+</body>
+</html>
